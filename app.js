@@ -12,7 +12,7 @@ const app = express();
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Hello, world! 👋🏾");
+  res.send("Hello, world!");
 });
 
 //app.use()-Middleware
@@ -23,7 +23,7 @@ app.use("/plans", plans)
 app.use("/special-events", specialEvents)
 
 app.get("*", (req, res) => {
-    res.json({"error" : "Sorry, no page found! 😣"})
+    res.status(404).json({"error" : "Sorry, no page found! 😣"})
 })
 
 // EXPORT
