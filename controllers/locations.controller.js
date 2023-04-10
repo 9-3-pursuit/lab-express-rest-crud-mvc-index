@@ -2,6 +2,10 @@ const express = require("express");
 const locations = express.Router();
 const locationsArr = require("../models/location.model");
 
-const locationHandler = (req, res) => {};
+const locationHandler = (req, res) => {
+  res.json(locationArr);
+};
 
-locations.get();
+locations.get("/", locationHandler);
+
+module.exports = locations;
