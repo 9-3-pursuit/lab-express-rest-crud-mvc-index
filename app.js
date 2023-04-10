@@ -10,7 +10,6 @@ const specialEvents = require("./controllers/special-eventsController")
 const app = express();
 
 
-
 // ROUTES
 app.get("/", (req, res) => {
   res.send("Hello, world! 👋🏾");
