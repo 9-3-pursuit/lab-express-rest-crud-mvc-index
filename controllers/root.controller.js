@@ -1,9 +1,10 @@
+const express = require("express");
 const root = express.Router();
 
 const rootHandler = (req, res) => {
-  res.send("Hello, World!");
+  res.send("Hello, world!");
 };
 
-plans.get("/", rootHandler);
+root.get("/", rootHandler);
 
 module.exports = root;
