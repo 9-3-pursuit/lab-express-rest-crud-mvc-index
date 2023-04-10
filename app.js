@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
   res.send("Hello, world! 👋🏾");
 });
 
-//app.use()-Middlewear 
+//app.use()-Middleware
 app.use("/locations", locations)
 app.use("/machines", machines)
 app.use("/persons", persons)
