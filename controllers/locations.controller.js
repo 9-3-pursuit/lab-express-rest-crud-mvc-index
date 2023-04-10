@@ -1,9 +1,9 @@
 const express = require("express");
 const locations = express.Router();
-const locationsArray = require("../models/locationModel.js");
+const locationsArray = require("../models/location.model.js");
 
 locations.get("/", (req, res) => {
-  res.json(locationArray);
+  res.json(locationsArray);
 });
 
 locations.get("/:index", (req, res) => {

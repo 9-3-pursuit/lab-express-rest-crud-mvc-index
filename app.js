@@ -1,10 +1,10 @@
 // DEPENDENCIES
 const express = require("express");
-const locations = require("./controllers/locationsController")
-const machines = require("./controllers/machinesController")
-const persons = require("./controllers/personsController")
-const plans = require("./controllers/plansController")
-const specialEvents = require("./controllers/special-eventsController")
+const locations = require("./controllers/locations.controller")
+const machines = require("./controllers/machines.controller")
+const persons = require("./controllers/persons.controller")
+const plans = require("./controllers/plans.controller")
+const specialEvents = require("./controllers/special-events.controller")
 
 // CONFIGURATION
 const app = express();
@@ -21,6 +21,10 @@ app.use("/machines", machines)
 app.use("/persons", persons)
 app.use("/plans", plans)
 app.use("/special-events", specialEvents)
+
+app.get("*", (req, res) => {
+    res.json({"error" : "Sorry, no page found! 😣"})
+})
 
 // EXPORT
 module.exports = app;
