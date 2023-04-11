@@ -2,7 +2,7 @@ const express = require("express");
 const specialEvents = express.Router();
 const specialEventsArray = require("../models/special-event.model.js");
 
-specialEvents.get("/special-events", (req, res) => {
+specialEvents.get("/", (req, res) => {
   res.json(specialEventsArray);
 });
 
