@@ -14,7 +14,7 @@ app.use("/locations", locationsController);
 app.use("/persons", peopleController);
 app.use("/plans", plansController);
 app.use("/machines", machinesController);
-// app.use("/special-events", specialController);
+app.use("/special-events", specialController);
 
 app.get("*", (req, res) => {
   res.status(404).json({ error: "Page not found" });
