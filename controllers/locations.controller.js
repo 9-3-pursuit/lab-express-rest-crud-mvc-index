@@ -8,9 +8,10 @@ locations.get("/", (req, res) => { // middleware are like callbacks... but... mi
     res.json(locationsArray)
 });
 
-// // locations.get("/:index", (req, res) => {
-// //     const { index } = req.params;
-// //     res.json(locationsArray[index]);
-// // }); // /locations/:index
+// /locations/:index
+locations.get("/:index", (req, res) => {
+    const { index } = req.params;
+    res.json(locationsArray[index]);
+}); 
 
 module.exports = locations;

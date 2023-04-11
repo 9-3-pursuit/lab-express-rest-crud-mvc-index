@@ -25,10 +25,10 @@ app.use("/plans", plansController);
 
 app.use("/special-events", specialEventsController);
 
-// app.get("*", (req, res) => {
-//   //res.json({"error" : "Page Not Found"}) // Error message
-//   res.status(404).json({ "error" : "Page Not Found"})
-// })
+app.get("*", (req, res) => {
+  //res.json({"error" : "Page Not Found"}) // Error message
+  res.status(404).json({ "error" : "Page Not Found"})
+})
 
 // EXPORT
 module.exports = app;
