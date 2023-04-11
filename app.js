@@ -16,8 +16,12 @@ app.use("/plans", plansController);
 app.use("/machines", machinesController);
 app.use("/special-events", specialController);
 
+app.get("/locations/people", (req, res) => {
+
+})
+
 app.get("*", (req, res) => {
-  res.status(404).json({ error: "Page not found" });
+  res.status(404).json({ error: "Sorry, no page found!" });
 });
 
 module.exports = app;
