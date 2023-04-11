@@ -17,11 +17,11 @@ app.get("/", (req, res) => {
 })
 
 app.get("/locations/people" , (req, res) => {
-    
+
 })
 
 app.get("*", (req, res) => {
-    res.status(404).send("error")
+    res.status(404).send("Sorry, no page found!")
 })
 
 module.exports = app;
