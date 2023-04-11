@@ -25,8 +25,8 @@ app.get('/', (req, res) => {
 } );
 
 app.get('*', (req, res) => {
-  res.status(404).send('Sorry, no page found!');
-  
+  res.status(404).json({error:'Sorry, no page found!'});
+
 } );
 
 module.exports = app
