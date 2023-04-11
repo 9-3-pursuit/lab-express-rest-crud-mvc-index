@@ -16,9 +16,23 @@ app.use("/plans", plansController);
 app.use("/machines", machinesController);
 app.use("/special-events", specialController);
 
-app.get("/locations/people", (req, res) => {
+// app.get("/locations/people", (req, res) => {
 
-})
+//   const result = [];
+//   for (let i = 0; i < locations.length; i++) {
+//     const peopleInLocation = [];
+//     for (let j = 0; j < people.length; j++) {
+//       if (people[j].mainLocation === locations[i].zip) {
+//         peopleInLocation.push(person);
+//       }
+//     }
+//     result.push({
+//       location,
+//       people: peopleInLocation,
+//     });
+//   }
+//   res.json(result);
+// });
 
 app.get("*", (req, res) => {
   res.status(404).json({ error: "Sorry, no page found!" });
