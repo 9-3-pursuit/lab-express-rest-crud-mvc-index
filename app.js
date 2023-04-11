@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/locations", locationsController);
-// app.use("/persons", peopleController);
+app.use("/persons", peopleController);
 // app.use("/plans", plansController);
 app.use("/machines", machinesController);
 // app.use("/special-events", specialController);
