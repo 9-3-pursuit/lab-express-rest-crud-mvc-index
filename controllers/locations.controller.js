@@ -1,14 +1,21 @@
-const express = require('express');
+const express = require("express");
+
 const locations = express.Router();
-const locationsArray = require('../models/location.model.js');
 
-locations.get('/', (req, res) => {
-    res.json(locationsArray);
-    });
+const locationsArray = require("../models/location.model.js");
+console.log(locationsArray);
 
-    locations.get("/:index", (req, res) => {
-        const { index } = req.params;
-        res.json(locations[index]);
-    });
+// const bookmarksArray = require("../models/bookmarks.js");
 
-    module.exports = locations;
+locations.get("/", (req, res) => {
+    console.log("GET /locations");
+  res.json(locationsArray);
+});
+
+locations.get("/:index", (req, res) => {
+  const { index } = req.params;
+  res.json(locations[index]);
+});
+
+module.exports = locations
+
